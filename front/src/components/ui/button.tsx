@@ -97,7 +97,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, accent, activeAccent, tone, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
-      props.to ?  
+      props?.to ?  
         <Link to={props.to}>
           <Comp
             className={cn(buttonVariants({ variant, accent, size, activeAccent, tone, className }))}
